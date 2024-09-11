@@ -66,7 +66,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   De website heeft geen darkmode
 
   Screenreader:
-  Ik HAAT dat ding
+  Ik HAAT dat ding, ik ben gewoon overprikkeld als ik er een seconde naar luister.
+  de website heeft wel maar 1 h1, dus dat is goed, maar er worden veel te veel h2tjes gebruikt voor stukken tekst die p zouden moet zijn.
+  Er is ook geen enkel linkje te vinden op de website.
+
+
 
 
 </details>
@@ -79,7 +83,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-schets.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
