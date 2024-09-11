@@ -5,27 +5,108 @@
   box-sizing:border-box;  
 }
 
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-headers:rgb(68, 47, 58);
+	--color-p: rgb(119, 119, 119);
+	--color-background-white:rgb(255, 255, 255);
+	--color-background-yellow: rgb(248, 238, 216);
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
 /* jouw code */
+
+
+
+/*basics*/
+@font-face {
+	font-family: Poppins;
+	src: url(/fonts/poppins_regular.ttf), weight normal;
+	src: url(/fonts/poppins_bold.ttf), weight bold;
+	src: url(/fonts/poppins_extrabold.ttf), weight bolder;
+	src: url(/fonts/poppins_light.ttf), weight light;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+	color: var(--color-headers);
+}
+
+p {
+	font-size: 1em;
+	color: var(--color-p);
+}
+
+ul {
+	list-style-type: none;
+}
+
+li a {
+	text-decoration: none;
+}
+
+/*header*/
+
+header {
+	background-image: url(../images/header/header-foto.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	background-color: var(--color-background-yellow);
+}
+
+header ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+header li {
+	display: flex;
+	align-items: center;
+	margin: 2em;
+	transition: 0s;
+}
+
+header img:nth-of-type(1) /*apple logo*/ {
+	max-width: 7em;
+}
+
+header img:nth-of-type(2) /*mevrouw*/ {
+	transform: scaleX(-1);
+	visibility: hidden;
+}
+
+
+header li:first-of-type {
+	max-width: 7em;
+	left: 0;
+	top: 0;
+	margin-right: auto;
+}
+
+header li a {
+	color: var(--color-headers);
+	transition: 0s;
+}
+
+header li a:hover {
+	text-decoration: underline;
+}
+
 
