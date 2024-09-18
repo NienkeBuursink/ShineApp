@@ -9,25 +9,17 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
 	--color-brown:rgb(68, 47, 58);
 	--color-p: rgb(119, 119, 119);
 	--color-white:rgb(255, 255, 255);
 	--color-yellow: rgb(248, 238, 216);
-	--color-blue: rgb(52, 115, 113);
+	--color-blue: rgb(77, 144, 143);;
 	--color-black: rgb(25, 25, 25);
+	--color-orange: rgb(247, 202, 93);
+	--color-dark-orange: rgb(228, 164, 44);
 }
 
 
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
 
 
 
@@ -76,7 +68,7 @@ img {
 }
 
 h1 {
-	font-size: 1.7em;
+	font-size: 2em;
 	font-weight: 700;
 	line-height: 120%;
 	max-width: 10em;
@@ -91,6 +83,7 @@ h2 {
 
 h3 {
 	color: var(--color-brown);
+	font-size: 1.5em;
 }
 
 p {
@@ -99,11 +92,11 @@ p {
 	color: var(--color-p);
 }
 
-ul {
+li {
 	list-style-type: none;
 }
 
-li a {
+a {
 	text-decoration: none;
 }
 
@@ -221,6 +214,73 @@ header.toonMenu button span:nth-child(3){
 	translate: none;
 	rotate: -45deg;
 }
+
+
+
+
+/* footer */
+footer {
+	padding: 2em;
+	padding-bottom: 20em;
+}
+
+footer h2 {
+	text-align: start;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+footer h3 {
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+footer ul:first-of-type { /*follow*/
+	display: flex;
+}
+
+footer ul:first-of-type li img{
+	margin: 1em;
+	width: 1.5em;
+}
+
+footer ul:first-of-type li img:first-of-type {
+	margin-left: 0;
+}
+
+footer ol a {
+	color: var(--color-p);
+}
+
+footer ol a:hover {
+	color: var(--color-brown);
+	text-decoration: underline;
+}
+
+footer ul:last-of-type { /*download*/
+	display: flex;
+	justify-content: space-evenly;
+}
+
+footer ul:last-of-type img {
+	width: 10em;
+}
+
+footer span {
+	display: block;
+	margin: 1em 0;
+	width: 100%;
+	height: .1em;
+	background-color: var(--color-p);
+	opacity: 0.5;
+}
+
+footer p {
+	font-weight: 400;
+}
+
+
+
 
 
 
