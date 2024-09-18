@@ -118,10 +118,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - ik ben snel geholpen met de kleine vraag die ik had. We zijn helaas niet aan al onze html pagina's toegekomen. ik vond de meeting opzich een goed idee. maar naast mijn vraag van een half minuutje heb ik verder niet heel veel meegenomen.
 
 </details>
 

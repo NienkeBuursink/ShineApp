@@ -10,10 +10,12 @@
 /*********************/
 :root {
 	/* startje */
-	--color-headers:rgb(68, 47, 58);
+	--color-brown:rgb(68, 47, 58);
 	--color-p: rgb(119, 119, 119);
-	--color-background-white:rgb(255, 255, 255);
-	--color-background-yellow: rgb(248, 238, 216);
+	--color-white:rgb(255, 255, 255);
+	--color-yellow: rgb(248, 238, 216);
+	--color-blue: rgb(52, 115, 113);
+	--color-black: rgb(25, 25, 25);
 }
 
 
@@ -32,29 +34,29 @@
 /*basics*/
 @font-face {
 	font-family: Poppins;
-	src: url(/fonts/poppins_regular.ttf) format("truetype");
-	font-weight: normal;
+	src: url(../fonts/poppins_regular.ttf) format("truetype");
+	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Poppins;
-	src: url(/fonts/poppins_bold.ttf), format("truetype");
-	font-weight: bold;
+	src: url(../fonts/poppins_bold.ttf), format("truetype");
+	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Poppins;
-	src: url(/fonts/poppins_extrabold.ttf), format("truetype");
-	font-weight: bolder;
+	src: url(../fonts/poppins_extrabold.ttf), format("truetype");
+	font-weight: 800;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: Poppins;
-	src: url(/fonts/poppins_light.ttf), format("truetype");
-	font-weight: light;
+	src: url(../fonts/poppins_light.ttf), format("truetype");
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -74,12 +76,26 @@ img {
 }
 
 h1 {
-	font-size: 2em;
-	color: var(--color-headers);
+	font-size: 1.7em;
+	font-weight: 700;
+	line-height: 120%;
+	max-width: 10em;
+	color: var(--color-brown);
+}
+
+h2 {
+	font-size: 1.5em;
+	text-align: center;
+	color: var(--color-brown);
+}
+
+h3 {
+	color: var(--color-brown);
 }
 
 p {
 	font-size: 1em;
+	font-weight: 700;
 	color: var(--color-p);
 }
 
@@ -101,18 +117,17 @@ li a {
 
 header {
 	display: flex;
-	background-color: var(--color-background-yellow);
+	background-color: var(--color-yellow);
 }
 
 header nav {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	width: 100%;
 }
 
-header nav img {
-	display: none;
-	max-width: 3em;
+header img {
+	max-width: 5em;
 	margin: .5em;
 }
 
@@ -122,43 +137,60 @@ header nav ul{
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--color-background-yellow);
+	background-color: var(--color-yellow);
 	position: fixed;
 	inset: 0;
 	translate: -100%;
 	transition: .2s;
 }
 
-header.toonMenu ul{
-	translate: none;
+
+header nav ul li {
+	align-items: center;
+	justify-content: space-around;
+
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 1.5em;
 }
 
+header li a {
+	color: var(--color-brown);
+	transition: 0s;
+}
 
-header nav button {
+header li a:hover {
+	text-decoration: underline;
+	text-underline-offset: .7em;
+	/* https://stackoverflow.com/questions/1734618/how-to-increase-the-gap-between-text-and-underlining-in-css */
+}
+
+header button {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 
   	display:grid;
   	place-items:center;
   	width: 6em;
   	aspect-ratio: 1;
   	appearance: none;
-  	border:none;
   	background: none;
+	border: none;
 }
 
 
 header button span {
 	display: block;
 	width: 3em;
-	height: .3em;
-	background-color: var(--color-headers);
+	height: .2em;
+	background-color: var(--color-brown);
 	grid-row-start: 1;
 	grid-column-start: 1;
 	border-radius: .4em;
 	transition: .2s;
 }
-  
+
 header button span:nth-child(1){
 	translate: 0 -1em;
 }
@@ -166,7 +198,16 @@ header button span:nth-child(1){
 header button span:nth-child(3){
 	translate: 0 1em;
 }
-  
+
+header.toonMenu ul{
+	translate: none;
+	z-index: 2;
+}
+
+header.toonMenu button {
+	position: fixed;
+}
+
 header.toonMenu button span:nth-child(1){
 	translate: none;
 	rotate: 45deg;
@@ -181,52 +222,21 @@ header.toonMenu button span:nth-child(3){
 	rotate: -45deg;
 }
 
-header nav ul li {
-	align-items: center;
-	justify-content: space-around;
-
-	text-align: center;
-	font-size: 2em;
-	margin: 1.5em;
-}
-
-header li a {
-	color: var(--color-headers);
-	transition: 0s;
-}
-
-header li a:hover {
-	text-decoration: underline;
-}
 
 
-
-/* begin pagina*/
-section:first-of-type { 
-	/*mevrouw achtergrond en svg*/
-	background-image: url(../images/header/header-foto.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: center top;
-
-	display: grid;
-}
-
-section:first-of-type img:nth-last-of-type(2) { /*apple reward*/
-	max-width: 6em;
-}
-
-section:first-of-type img:nth-last-of-type(1) { /*apple reward*/
-	width: 100%;
-}
 
 
 
 @media (min-width: 44em) {
 
-	header nav {
+	/* burgermenuutje */
+	header {
 		display: flex;
-		justify-content: center;
+		align-items: center;
+	}
+
+	header nav {
+		display: block;
 	}
 
 	header nav button {
@@ -238,6 +248,7 @@ section:first-of-type img:nth-last-of-type(1) { /*apple reward*/
 		flex-direction: row;
 		position: static;
 		translate: unset;
+		justify-content: space-around;
 	}
 
 	header nav ul li {

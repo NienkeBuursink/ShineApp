@@ -1,0 +1,202 @@
+/* begin */
+section:first-of-type { 
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	background-image: url(../images/header/header-foto.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 45em;
+}
+
+section:first-of-type p {
+	color: var(--color-brown);
+	max-width: 15em;
+}
+
+section:first-of-type img:nth-of-type(1) { /*apple reward*/
+	margin-top: 2em;
+	max-width: 6em;
+}
+
+section:first-of-type > * {
+	margin: .8em;
+	z-index: 1;
+}
+
+section:first-of-type img:nth-of-type(2) { /*svg*/
+	position: absolute;
+	margin: 0;
+	width: 20em;
+	height: 50em;
+	left: 0;
+	translate: 0 22%;
+	z-index: 0;
+}
+
+
+
+
+
+
+
+/* premium */
+section:nth-of-type(2) {
+	display: grid;
+	padding: 3em;
+}
+
+section:nth-of-type(2) > p {
+	order: -1;
+	place-self: center;
+
+	font-weight: 300;
+	color: var(--color-brown);
+}
+
+section:nth-of-type(2) ol {
+	display: grid;
+	place-content: center;
+	gap: 2em;
+	margin-top: 4em;
+	margin-bottom: 5em;
+}
+
+section:nth-of-type(2) li {
+	display: grid;
+	grid-template-columns: 2fr 5fr 1fr;
+	gap:.5em;
+}
+
+section:nth-of-type(2) li h3,
+section:nth-of-type(2) li p {
+	grid-column-start: 2;
+}
+
+section:nth-of-type(2) img {
+  	grid-column-start:1;
+  	grid-row:1/3;
+	align-self: center;
+	justify-self: end;
+	width: 12vw;
+	max-width: 4.5em;
+}
+
+section:nth-of-type(2) video {
+	place-self: center;
+	width: 60vw;
+}
+
+
+
+
+
+
+/* podcasts */
+section:nth-of-type(3) {
+    background-color: var(--color-blue);
+    padding: 2em 0;
+}
+
+section:nth-of-type(3) h2 {
+    margin: 2em;
+    margin-bottom: 3em;
+    color: var(--color-white);
+}
+
+section:nth-of-type(3) p {
+    color: var(--color-white);
+    font-size: .7em;
+    font-weight: 400;
+}
+
+section:nth-of-type(3) ul {
+    display: flex;
+    overflow-x: auto;
+    
+    height: 13em;
+    margin: 2em 0 0 0;
+}
+
+section:nth-of-type(3) li {
+    position: relative;
+    display: grid;
+    grid-template-rows: 6fr 1fr 2fr;
+
+    padding: 1em;
+    margin: 0 0 0 1em;
+
+    background-color: var(--color-white);
+    border-radius: .5em;
+    width: 50em;
+}
+
+section:nth-of-type(3) li:last-of-type /* laatste podcast*/{
+    margin: 0 1em;
+}
+
+section:nth-of-type(3) li h3 {
+    color: var(--color-black);
+    font-size: 1em;
+    font-weight: 800;
+    width: 13em;
+}
+
+section:nth-of-type(3) li p {
+    color: var(--color-p);
+    order: -1;
+}
+
+section:nth-of-type(3) li img:first-of-type {
+    place-self: center;
+    margin-bottom: .5em;
+    order:-2
+}
+
+section:nth-of-type(3) li img:nth-of-type(2) {
+    width: 3em;
+    position: absolute;
+    grid-row: 1/2;
+    place-self: center;
+}
+
+
+
+
+
+/* therapists */
+section:nth-of-type(4) {
+    display: grid;
+    background-color: var(--color-yellow);
+}
+
+section:nth-of-type(4) > img /*liggende vrouw*/ {
+    width: 100%;
+    order: -1;
+}
+
+section:nth-of-type(4) h2 {
+    margin: 2em;
+}
+
+section:nth-of-type(4) ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    list-style: none;
+}
+
+
+
+
+
+
+@media (min-width: 44em) {
+    /* bovenste deel */
+    section:first-of-type { 
+        transform: none;
+    }
+}
