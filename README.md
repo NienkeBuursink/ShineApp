@@ -148,10 +148,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  ik heb voor mijn tweede html wat hulp gekregen:
+  - een p met breaks opmaken
+  - geen meerdere h3s in dezelfde section
+
+  verder wat tips over hoe ik dingen kon doen in javascript.
+  Ik heb het met de reviews die veranderen gefixt, maar de intersection observer begreep ik niet helemaal toen ik er thuis naar ging kijken.
 
 </details>
 
