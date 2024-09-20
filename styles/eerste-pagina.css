@@ -1,3 +1,6 @@
+/* intersection observer */
+
+
 /* begin */
 main section:first-of-type { 
 	position: relative;
@@ -12,20 +15,26 @@ main section:first-of-type {
 	height: 45em;
 }
 
+main section:first-of-type > * {
+	z-index: 1;
+}
+
+main section:first-of-type h1 {
+    max-width: 10em;
+    margin: 1em;
+}
+
 main section:first-of-type p {
 	color: var(--color-brown);
 	max-width: 15em;
+    margin-left: 2em;
 }
 
 main section:first-of-type img:nth-of-type(1) { /*apple reward*/
-	margin-top: 2em;
+	margin: 2em;
 	max-width: 6em;
 }
 
-main section:first-of-type > * {
-	margin: .8em;
-	z-index: 1;
-}
 
 main section:first-of-type img:nth-of-type(2) { /*svg*/
 	position: absolute;
@@ -252,7 +261,9 @@ section:nth-of-type(4) li img {
 
 /* reviews */
 section:nth-of-type(5) {
+    position: relative;
     display: grid;
+    gap: 1.5em;
     background-color: var(--color-blue);
     justify-items: center;
     padding: 4em 2em;
@@ -263,15 +274,19 @@ section:nth-of-type(5) h2 {
     order: -1;
 }
 
+section:nth-of-type(5) ul {
+    display: grid;
+    place-items: center;
+}
+
 section:nth-of-type(5) p {
-    display:none; 
+    display: block;
+    grid-row-start: 1;
+	grid-column-start: 1;
+
     font-weight: 400;
     color: var(--color-white);
     text-align: justify;
-}
-
-section:nth-of-type(5) p:first-of-type {
-    display: block;
 }
 
 section:nth-of-type(5) img:first-of-type {
@@ -282,13 +297,12 @@ section:nth-of-type(5) img:first-of-type {
 section:nth-of-type(5) img:nth-of-type(2) {
     order: -1;
     width: 2.5em;
-    margin: 2em;
 }
 
 
 section:nth-of-type(5) div{
     width: 80%;
-    height: .6em;
+    height: .4em;
     margin-top: 3em;
     border-radius: 1em;
     background-color: var(--color-dark-blue);
@@ -300,18 +314,27 @@ section:nth-of-type(5) div span {
     background-color: var(--color-white);
 
     border-radius: 1em;
-    height: .6em;
+    height: .4em;
     left: 0;
     transform-origin: left; 
-    animation: tijdbalkje 5s infinite linear;
+    animation: tijdbalkje 7s infinite linear;
 }
+
+
+.nietLatenZien {
+    opacity: 0;
+}
+
+.latenZien {
+    opacity: 1;
+}
+
+
 
 @keyframes tijdbalkje {
     0% {width: 0%;}
     100% {width: 100%;}
 }
-
-
 
 
 
