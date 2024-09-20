@@ -13,7 +13,8 @@
 	--color-p: rgb(119, 119, 119);
 	--color-white:rgb(255, 255, 255);
 	--color-yellow: rgb(248, 238, 216);
-	--color-blue: rgb(77, 144, 143);;
+	--color-blue: rgb(77, 144, 143);
+	--color-dark-blue: rgb(48, 122, 122);
 	--color-black: rgb(25, 25, 25);
 	--color-orange: rgb(247, 202, 93);
 	--color-dark-orange: rgb(228, 164, 44);
@@ -63,6 +64,11 @@
 	font-family: Poppins, sans-serif;
 }
 
+*:focus-visible {
+	outline: none;
+	border: solid .1em var(--color-brown);
+}
+
 img {
 	max-width: 100%;
 }
@@ -98,6 +104,10 @@ li {
 
 a {
 	text-decoration: none;
+}
+
+a:focus-visible{
+	text-decoration: underlines;
 }
 
 
@@ -199,6 +209,9 @@ header.toonMenu ul{
 
 header.toonMenu button {
 	position: fixed;
+	margin: 11.25px 0;
+	/* pixels expres gebruikt, de knop bleef niet
+	 op dezelfde plek zitten als er werd geklikt */
 }
 
 header.toonMenu button span:nth-child(1){
@@ -220,18 +233,18 @@ header.toonMenu button span:nth-child(3){
 
 /* footer */
 footer {
-	padding: 2em;
+	padding: 2.5em;
 	padding-bottom: 20em;
 }
 
 footer h2 {
 	text-align: start;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 800;
 }
 
 footer h3 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 800;
 }
 
@@ -240,12 +253,24 @@ footer ul:first-of-type { /*follow*/
 }
 
 footer ul:first-of-type li img{
-	margin: 1em;
+	margin: 2em;
 	width: 1.5em;
 }
 
 footer ul:first-of-type li img:first-of-type {
 	margin-left: 0;
+}
+
+
+footer section { /*ol*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2em;
+	margin: 2em 0;
+}
+
+footer ol li {
+	line-height: 2.5em;
 }
 
 footer ol a {
@@ -257,7 +282,9 @@ footer ol a:hover {
 	text-decoration: underline;
 }
 
+
 footer ul:last-of-type { /*download*/
+	margin: .5em;
 	display: flex;
 	justify-content: space-evenly;
 }

@@ -1,5 +1,5 @@
 /* begin */
-section:first-of-type { 
+main section:first-of-type { 
 	position: relative;
 
 	display: flex;
@@ -12,22 +12,22 @@ section:first-of-type {
 	height: 45em;
 }
 
-section:first-of-type p {
+main section:first-of-type p {
 	color: var(--color-brown);
 	max-width: 15em;
 }
 
-section:first-of-type img:nth-of-type(1) { /*apple reward*/
+main section:first-of-type img:nth-of-type(1) { /*apple reward*/
 	margin-top: 2em;
 	max-width: 6em;
 }
 
-section:first-of-type > * {
+main section:first-of-type > * {
 	margin: .8em;
 	z-index: 1;
 }
 
-section:first-of-type img:nth-of-type(2) { /*svg*/
+main section:first-of-type img:nth-of-type(2) { /*svg*/
 	position: absolute;
 	margin: 0;
 	width: 25em;
@@ -94,27 +94,41 @@ section:nth-of-type(2) video {
 
 /* podcasts */
 section:nth-of-type(3) {
+    position: relative;
+    display: grid;
     background-color: var(--color-blue);
-    padding: 2em 0;
+    padding: 3.5em 0;
 }
 
 section:nth-of-type(3) h2 {
     margin: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     color: var(--color-white);
 }
 
-section:nth-of-type(3) p {
+section:nth-of-type(3) div{
+    position: absolute;
+    animation: gekke-bounce 2s infinite;
+    place-self: center;
+}
+
+section:nth-of-type(3) div p {
     color: var(--color-white);
     font-size: .7em;
     font-weight: 400;
+    rotate: 10deg;
 }
+
+section:nth-of-type(3) div img {
+    width: 4em;
+}
+
 
 section:nth-of-type(3) ul {
     display: flex;
     overflow-x: scroll;
     
-    height: 15em;
+    height: 15.5em;
     padding: 2em 0 0 0;
 }
 
@@ -153,7 +167,6 @@ section:nth-of-type(3) li p {
 }
 
 section:nth-of-type(3) li img:first-of-type {
-    place-self: center;
     margin-bottom: .5em;
     order:-2
 }
@@ -165,8 +178,17 @@ section:nth-of-type(3) li img:nth-of-type(2) {
     place-self: center;
 }
 
-section:nth-of-type(3) li img:nth-of-type(3) {
-    display: none;
+section:nth-of-type(3) li img:nth-of-type(2):hover {
+    content: url('../images/podcasts/playbutton-hover.svg');
+}
+
+@keyframes gekke-bounce {
+    0% {translate: 0 -2em;}
+    10% {translate: 0 -3em;}
+    20% {translate: 0 -2em;}
+    30% {translate: 0 -2.5em;}
+    40% {translate: 0 -2em;}
+    100% {translate: 0 -2em;}
 }
 
 
@@ -223,6 +245,11 @@ section:nth-of-type(4) li img {
 }
 
 
+
+
+
+
+
 /* reviews */
 section:nth-of-type(5) {
     display: grid;
@@ -259,6 +286,35 @@ section:nth-of-type(5) img:nth-of-type(2) {
 }
 
 
+section:nth-of-type(5) div{
+    width: 80%;
+    height: .6em;
+    margin-top: 3em;
+    border-radius: 1em;
+    background-color: var(--color-dark-blue);
+}
+
+
+section:nth-of-type(5) div span {
+    display: block;
+    background-color: var(--color-white);
+
+    border-radius: 1em;
+    height: .6em;
+    left: 0;
+    transform-origin: left; 
+    animation: tijdbalkje 5s infinite linear;
+}
+
+@keyframes tijdbalkje {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+
+
+
+
 
 
 /* co-founders */
@@ -274,7 +330,7 @@ section:nth-of-type(6) h2 {
 }
 
 section:nth-of-type(6) p {
-    margin: 2em;
+    margin: 2em 0;
     font-size: 1.2em;
     font-weight: 400;
     text-align: center;
