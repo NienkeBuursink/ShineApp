@@ -1,8 +1,10 @@
-// JavaScript Document
 const button = document.querySelector("button");
 const header = document.querySelector("header");
-const reviews = document.querySelectorAll(".reviews p");
+const reviews = document.querySelectorAll("section:nth-of-type(5) p");
+const therapists = document.querySelectorAll("section:nth-of-type(4) li");
+const podcasts = document.querySelectorAll("section:nth-of-type(3) li");
 
+// hamburgertje
 button.onclick = toggleMenu;
 
 function toggleMenu (){
@@ -10,7 +12,7 @@ function toggleMenu (){
 }
 
 
-// tip gekregen van Tom en Bahaa 
+// reviews veranderen, tip gekregen van Tom en Bahaa 
 function reviewsLatenZien(currentIndex = 0) {
   let alleReviews = reviews.length;
 
@@ -29,5 +31,26 @@ function reviewsLatenZien(currentIndex = 0) {
 
 
 window.onload = () => reviewsLatenZien();
+
+
+
+// gekke observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const intersecting = entry.isIntersecting;
+    
+    if(intersecting){
+      entry.target.classList.add("inbeeld");
+    }
+  });
+});
+
+podcasts.forEach((podcast) => {
+  observer.observe(podcast);
+});
+
+therapists.forEach((therapist) => {
+  observer.observe(therapist);
+});
 
 
