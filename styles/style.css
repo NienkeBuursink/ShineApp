@@ -10,11 +10,10 @@
 /*********************/
 :root {
 	--color-brown:rgb(68, 47, 58);
-	--color-p: rgb(119, 119, 119);
+	--color-p: rgb(95, 95, 95);
 	--color-white:rgb(255, 255, 255);
 	--color-yellow: rgb(248, 238, 216);
-	--color-blue: rgb(77, 144, 143);
-	--color-dark-blue: rgb(48, 122, 122);
+	--color-blue: rgb(48, 122, 122);
 	--color-black: rgb(25, 25, 25);
 	--color-orange: rgb(247, 202, 93);
 	--color-dark-orange: rgb(228, 164, 44);
@@ -103,22 +102,25 @@ li {
 	list-style-type: none;
 }
 
-a {
-	text-decoration: none;
-}
-
-a:focus-visible{
-	text-decoration: underlines;
+a:hover,
+a:focus {
+	text-underline-offset: .7em;
 }
 
 
+body > a {
+	position: absolute;
+	translate: -9999px;
 
+	&:focus{ /*so naar vincent*/
+		translate: none;
+	}
+}
 
 
 
 
 /*header*/
-
 header {
 	display: flex;
 	background-color: var(--color-yellow);
@@ -126,19 +128,20 @@ header {
 
 header nav {
 	display: flex;
-	justify-content: flex-end;
 	width: 100%;
 }
 
-header > a {
-	margin: .7em;
-	background-color: white;
-	border-radius: 50%;
+header nav > a {
+	display: flex;
+	width: 100%;
 }
 
-header img {
-	max-width: 3.5em;
-	margin: .5em;
+header nav a img{
+	border-radius: 50%;
+	background-color: white;
+	width: 4.5em;
+	margin: .7em;
+	padding: .8em;
 }
 
 header nav ul{
@@ -167,12 +170,11 @@ header nav ul li {
 
 header li a {
 	color: var(--color-brown);
-	transition: 0s;
+	text-decoration: none;
 }
 
 header li a:hover {
 	text-decoration: underline;
-	text-underline-offset: .7em;
 	/* https://stackoverflow.com/questions/1734618/how-to-increase-the-gap-between-text-and-underlining-in-css */
 }
 
@@ -180,6 +182,7 @@ header button {
 	position: relative;
 	z-index: 2;
 
+	justify-self: end;
   	display:grid;
   	place-items:center;
   	width: 6em;
@@ -187,6 +190,7 @@ header button {
   	appearance: none;
   	background: none;
 	border: none;
+	margin: 0 5.07px;
 }
 
 
@@ -216,7 +220,9 @@ header.toonMenu ul{
 
 header.toonMenu button {
 	position: fixed;
-	margin: 11.25px 0;
+	right: 0;
+	
+	margin: 7.195px 0;
 	/* pixels expres gebruikt, de knop bleef niet
 	 op dezelfde plek zitten als er werd geklikt */
 }
@@ -240,6 +246,8 @@ header.toonMenu button span:nth-child(3){
 
 /* footer */
 footer {
+	display: grid;
+	gap: 2em;
 	padding: 2.5em;
 	padding-bottom: 20em;
 }
@@ -257,25 +265,51 @@ footer h3 {
 
 footer ul:first-of-type { /*follow*/
 	display: flex;
+	gap: 2em;
 }
 
 footer ul:first-of-type li img{
-	margin: 2em;
-	width: 1.5em;
+	width: 2em;
 	filter: brightness(0) saturate(100%) invert(16%) sepia(29%) saturate(546%) hue-rotate(276deg) brightness(93%) contrast(87%);
+	&:hover {
+		scale: 120%;
+	}
 }
 
-footer ul:first-of-type li img:first-of-type {
-	margin-left: 0;
-}
-
-
-footer section { /*ol*/
+footer section { /*ols*/
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 2em;
+	gap: 1em;
 	margin: 2em 0;
 }
+
+footer section h3:nth-of-type(1) {
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+footer section ol:nth-of-type(1) {
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+footer section h3:nth-of-type(2) {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+footer section ol:nth-of-type(2) {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+footer section h3:nth-of-type(3) {
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+footer section ol:nth-of-type(3) {
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+
 
 footer ol li {
 	line-height: 2.5em;
@@ -283,12 +317,15 @@ footer ol li {
 
 footer ol a {
 	color: var(--color-p);
+
+	&:hover,
+	&:focus {
+		color: var(--color-brown);
+		text-decoration: underline;
+	}
 }
 
-footer ol a:hover {
-	color: var(--color-brown);
-	text-decoration: underline;
-}
+
 
 
 footer ul:last-of-type { /*download*/
@@ -303,7 +340,6 @@ footer ul:last-of-type img {
 
 footer span {
 	display: block;
-	margin: 1em 0;
 	width: 100%;
 	height: .1em;
 	background-color: var(--color-p);
@@ -325,14 +361,6 @@ footer p {
 @media (min-width: 44em) {
 
 	/* burgermenuutje */
-	header {
-		display: flex;
-		align-items: center;
-	}
-
-	header nav {
-		display: block;
-	}
 
 	header nav button {
 		display: none;
@@ -342,6 +370,7 @@ footer p {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
+		flex-wrap: nowrap;
 		gap: 1.5em;
 		position: static;
 		translate: unset;
@@ -349,7 +378,8 @@ footer p {
 	}
 
 	header nav ul li {
-		margin: 0 .5em 0 .5em;
+		margin: 0;
+		width: 8em;
 	}  
 
 	header nav img {
@@ -359,8 +389,16 @@ footer p {
 
 	/* footer */
 	footer section {
-		display: flex;
-		gap: 6em;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	footer section h3:nth-of-type(3) {
+		grid-column: 3/4;
+		grid-row: 1/2;
+	}
+	footer section ol:nth-of-type(3) {
+		grid-column: 3/4;
+		grid-row: 2/3;
 	}
 
 	footer ul:first-of-type img {
@@ -381,7 +419,7 @@ footer p {
 		--color-brown:rgb(255, 255, 255);
 		--color-p: rgb(248, 238, 216);
 		--color-white:rgb(68, 47, 47);
-		--color-yellow: rgb(228, 164, 44);
+		--color-yellow: rgb(163, 123, 77);
 		--color-blue: rgb(38, 95, 95);
 		--color-dark-blue: rgb(77, 144, 143);
 		--color-black: rgb(255, 255, 255);
@@ -399,5 +437,18 @@ footer p {
 }
 
 
+
+@media (prefers-contrast: more) {
+    :root {
+		--color-brown:rgb(68, 47, 58);
+		--color-p: rgb(95, 95, 95);
+		--color-white:rgb(255, 255, 255);
+		--color-yellow: white;
+		--color-blue: black;
+		--color-black: rgb(25, 25, 25);
+		--color-orange: rgb(247, 202, 93);
+		--color-dark-orange: rgb(228, 164, 44);
+	}
+}
 
 

@@ -132,8 +132,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik ben al redelijk op weg, mijn html gaat goed en de css opzich ook. ik heb nu alleen moeite met javascript.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -146,9 +145,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  ik heb voor mijn tweede html wat hulp gekregen:
+  ik heb voor mijn tweede html pagina wat hulp gekregen:
   - een p met breaks opmaken
   - geen meerdere h3s in dezelfde section
 
@@ -167,7 +165,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Eerst deed de navigatie het niet, dit kwam omdat daar een image (logo) voor stond. Deze heb ik aangepast en nu werkte de navigatie wel. Ook heb ik van vincent de tip gekregen om een skip to main content knop aan te maken.
+  Ook werd heel veel van de content overgeslagen met een tab. hiervoor heb ik een tabindex="0" toe moeten voegen.
+
+  Ik heb ook mijn html door een validator gehaald, en kwam erachter dat ik redelijk wat dingen moest verplaaten. ik had namelijk h3tjes als direct childs van list items. hierdoor ging mijn css ook helemaal door de war.
 
 </details>
 
@@ -181,7 +182,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  mijn html en css zijn nu zo goed als af. ik heb alleen moeite met de javascript. ik heb namelijk een audiobestandje die het maar niet wilt doen.
 
 
   ### Agenda voor meeting

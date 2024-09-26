@@ -14,30 +14,31 @@
 </head>
 
 <body>
+	<a href="#maincontent">Skip to main content</a> <!-- dankje vincent-->
 	<header>
-		<a href="#"><img src="images/header/shine-logo.png" alt="Welkom op de Shine app website!"></a>
 		<nav>
+			<a href="#"><img src="images/header/shine-logo.png" alt="Welcome on the Shine App website!"></a>
 			<ul>
 				<li><a href="about.html">About</a></li>
 				<li><a href="#">Shine At Work</a></li>
 				<li><a href="#">Podcasts</a></li>
 			</ul>
-			<button aria-label="toggle menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
+		<button aria-label="toggle menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		</nav>
 	</header>
 
 
 
 	
-	<main>
+	<main id="maincontent">
 		<section> <!--beginnetje-->
-		<h1>Daily mental wellness for all</h1>
-		<p>The mental wellness app for better mornings, brighter days, and the truest you.</p>
-		<img src="images/header/apple-best-of-2020.svg" alt="Reward emblem: Apple best of 2020">
+		<h1 tabindex="0">Daily mental wellness for all</h1>
+		<p tabindex="0">The mental wellness app for better mornings, brighter days, and the truest you.</p>
+		<img tabindex="0" src="images/header/apple-best-of-2020.svg" alt="Reward emblem: Apple best of 2020">
 		<img src="images/header/circle2.svg" alt="">
 		</section>
 
@@ -46,87 +47,141 @@
 			<p>Named Best of the Year by Apple</p>
 			<ol>
 				<li>
-					<h3>Daily Meditations</h3>
-					<p>Listen and learn a new self-care skill every weekday with the Daily Shine</p>
-					<img src="images/premium/daily-meditation-icon.png" alt="icon of a hand holding a shining heart">
+					<article>
+						<h3>Daily Meditations</h3>
+						<p>Listen and learn a new self-care skill every weekday with the Daily Shine</p>
+						<img src="images/premium/daily-meditation-icon.png" alt="icon of a hand holding a shining heart">
+					</article>
 				</li>
-				<li>
-					<h3>Self-Care Courses</h3>
-					<p>Go deeper on topics like stress, boundaries, and more with audio courses hosted by experts</p>
-					<img src="images/premium/self-care-courses-icon.png" alt="icon of an agenda with a pen next to it">
+				<li tabindex="0">
+					<article>
+						<h3>Self-Care Courses</h3>
+						<p>Go deeper on topics like stress, boundaries, and more with audio courses hosted by experts</p>
+						<img src="images/premium/self-care-courses-icon.png" alt="icon of an agenda with a pen next to it">
+					</article>
 				</li>
-				<li>
-					<h3>Personalized Support</h3>
-					<p>Get recommendations from a library of 1,000+ meditations with representation at the forefront</p>
-					<img src="images/premium/personalised-support-icon.png" alt="icon of an envelowe with a heart shaped sealing wax">
+				<li tabindex="0">
+					<article>
+						<h3>Personalized Support</h3>
+						<p>Get recommendations from a library of 1,000+ meditations with representation at the forefront</p>
+						<img src="images/premium/personalised-support-icon.png" alt="icon of an envelope with a heart-shaped sealing wax">
+					</article>
 				</li>
-				<li>
-					<h3>Virtual Community Workshops</h3>
-					<p>Join monthly virtual workshops to get support from experts and our inclusive community</p>
-					<img src="images/premium/community-workshop-icon.png" alt="icon of two hands holding and supporting eachother">
+				<li tabindex="0">
+					<article>
+						<h3>Virtual Community Workshops</h3>
+						<p>Join monthly virtual workshops to get support from experts and our inclusive community</p>
+						<img src="images/premium/community-workshop-icon.png" alt="icon of two hands holding and supporting each other">
+					</article>
 				</li>
 			</ol>
-			<video controls autoplay muted aria-label="Demonstratievideo van de app met de belangrijkste functies in actie.">
+			
+			<video controls aria-label="Demonstration video with the most important functions of the app">
 				<source src="images/premium/app-demo.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
+			<img src="images/tweede-pagina/telefoons.webp" alt="a picture of the app with their most important functions">
 		</section>
 
 		<section><!--Podcasts-->
-			<h2>Listen to new meditations every day that are relevant to your world.</h2>
+			<h2 tabindex="0">Listen to new meditations every day that are relevant to your world.</h2>
 			<div>
-				<p>Try some samples!</p>
+				<p tabindex="0">Try some samples!</p>
 				<img src="images/podcasts/pijltje.svg" alt="">
 			</div>
 			<ul>
 				<li>
-					<h3>Representation Burnout</h3>
-					<p>Tiffany Walker</p>
-					<img src="images/podcasts/purple.jpg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<h3 tabindex="0">Representation Burnout</h3>
+					<p tabindex="0">Tiffany Walker</p>
+					<img src="images/podcasts/purple.jpg" alt="">
+					<dialog>
+						<button aria-label="close popup">
+							<span></span>
+							<span></span>
+						</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+						<img src="images/podcasts/purple.jpg" alt="">
+						<button><img src="images/podcasts/backwards.png" alt="replay 5 seconds"></button>
+						<button><img src="images/podcasts/playbutton2.png" alt="play the podcast"></button>
+						<button><img src="images/podcasts/forwards.png" alt="forward 5 seconds"></button>
+						<button><img src="images/podcasts/pausebutton.png" alt="pause the podcast"></button>
+						<p>the included audio should be a sample of a podcast, but is, in fact, a rickroll</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
-					<h3>Focus On What You Can Control</h3>
-					<p>Tiffany Walker</p>
-					<img src="images/podcasts/pink.jpeg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<h3 tabindex="0">Focus On What You Can Control</h3>
+					<p tabindex="0">Tiffany Walker</p>
+					<img src="images/podcasts/pink.jpeg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
-					<h3>Conquer Your Inner Critic</h3>
-					<p>Jamila Reddy</p>
-					<img src="images/podcasts/red.jpeg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<h3 tabindex="0">Conquer Your Inner Critic</h3>
+					<p tabindex="0">Jamila Reddy</p>
+					<img src="images/podcasts/red.jpeg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
 					<h3>Honor Your Whole Self</h3>
 					<p>Mel Chanté</p>
-					<img src="images/podcasts/yellow.jpeg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<img src="images/podcasts/yellow.jpeg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
 					<h3>Love Your Small Wins</h3>
 					<p>Aisha Beau</p>
-					<img src="images/podcasts/green.jpg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<img src="images/podcasts/green.jpg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
 					<h3>Permission to Take Up Space</h3>
 					<p>Jor-El Caraballo</p>
-					<img src="images/podcasts/purple.jpg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<img src="images/podcasts/purple.jpg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 				<li>
 					<h3>Practice Acceptance</h3>
 					<p>Elisha Mudly</p>
-					<img src="images/podcasts/pink.jpeg">
-					<img src="images/podcasts/playbutton.svg" alt="">				
+					<img src="images/podcasts/pink.jpeg" alt="">
+					<dialog>
+						<button>Close</button>
+						<h4>Representation Burnout</h4>
+						<p>Tiffany Walker</p>
+					</dialog>
+					<button><img src="images/podcasts/playbutton.svg" alt="play the sample"></button>				
 				</li>
 			</ul>
 		</section>
 
 		<section><!--therapists-->
 			<h2>Learn from teachers and therapists you can relate to.</h2>
-			<img src="images/therapists/laying-down-lady.jpg" alt="A lady thats laying down on her bed looking at her phone while smiling">
+			<img src="images/therapists/laying-down-lady.jpg" alt="">
 			<ol>
 				<li>
 					<h3>Daily Shine Host</h3>
@@ -164,31 +219,51 @@
 		<section><!--reviews (class voor in js)-->
 			<h2>1 in 3 reviews refer to Shine as life-changing</h2>
 			<ul>
-				<p class="nietLatenZien">
-					All the mental health tools I was searching for put together into one amazing app. 
-					It's a gratitude journal, inspirational podcast library, meditation library, daily affirmation subscription, 
-					and community of mental health positive people. Please give this a try!
-				</p>
-				<p class="nietLatenZien">
-					I have purchased reflection journals and listened to other apps but this one is different.
-					This app is perfect because in their voices is my voice, my experiences. Every episode so far 
-					has resonated deeply with me as a Latina who often suffers from imposter syndrome.
-				</p>
-				<p class="nietLatenZien">
-					This is so worth it! So inclusive and specific!! The amount of support and help is amazing.
-					Great community. I can't afford therapy and this has helped me more than any therapist. 
-					I loved it so much I bought my twin sister and bestie a membership.
-				</p>
-				<p class="nietLatenZien">
-					If you have stress or anxiety, a lack of confidence or self esteem, or just want to relax your mind,
-					this app is for you. Their SHINE method for Anxiety is amazing, and doing the Daily Shine every morning 
-					makes my days start off so much better. Paying for all the meditations is well worth it.
-				</p>
-				<p class="nietLatenZien">
-					I was never really taught anything about self-care or self-healing nor healthy coping skills. 
-					This app has really helped open that door for me. I'm a single mother of 5 so life can really be challenging at times, 
-					Shine helps ground me and remind me I'm in control.
-				</p>
+				<li>
+					<article class="nietLatenZien">
+						<p>
+							All the mental health tools I was searching for put together into one amazing app.
+							It's a gratitude journal, inspirational podcast library, meditation library, daily affirmation subscription,
+							and community of mental health positive people. Please give this a try!
+						</p>
+					</article>
+				</li>
+				<li>
+					<article class="nietLatenZien">
+						<p>
+							I have purchased reflection journals and listened to other apps but this one is different.
+							This app is perfect because in their voices is my voice, my experiences. Every episode so far
+							has resonated deeply with me as a Latina who often suffers from imposter syndrome.
+						</p>
+					</article>
+				</li>
+				<li>
+					<article class="nietLatenZien">
+						<p>
+							This is so worth it! So inclusive and specific!! The amount of support and help is amazing.
+							Great community. I can't afford therapy and this has helped me more than any therapist.
+							I loved it so much I bought my twin sister and bestie a membership.
+						</p>
+					</article>
+				</li>
+				<li>
+					<article class="nietLatenZien">
+						<p>
+							If you have stress or anxiety, a lack of confidence or self esteem, or just want to relax your mind,
+							this app is for you. Their SHINE method for Anxiety is amazing, and doing the Daily Shine every morning
+							makes my days start off so much better. Paying for all the meditations is well worth it.
+						</p>
+					</article>
+				</li>
+				<li>
+					<article class="nietLatenZien">
+						<p>
+							I was never really taught anything about self-care or self-healing nor healthy coping skills.
+							This app has really helped open that door for me. I'm a single mother of 5 so life can really be challenging at times,
+							Shine helps ground me and remind me I'm in control.
+						</p>
+					</article>
+				</li>
 			</ul>
 			<img src="images/reviews/stars.png" alt="five stars">
 			<img src="images/reviews/quote.svg" alt="">
@@ -210,6 +285,7 @@
 	<footer>
 		<h2>Follow us</h2>
 		<ul>
+			<!-- https://icons8.com/icon/set/social-media/material -->
 			<li>
 				<a href="#"><img src="images/footer/instagram.svg" alt="Instagram icon"></a>
 			</li>
@@ -228,20 +304,20 @@
 		</ul>
 
 		<section>
+			<h3>Company</h3>
 			<ol>
-				<h3>Company</h3>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Shine At Work</a></li>
 				<li><a href="#">Podcasts</a></li>
 			</ol>
 
+			<h3>Resources</h3>
 			<ol>
-				<h3>Resources</h3>
 				<li><a href="#">Get Advice</a></li>
 			</ol>
 			
+			<h3>Help</h3>
 			<ol>
-				<h3>Help</h3>
 				<li><a href="#">FAQ</a>
 				<li><a href="#">Contact</a></li>
 			</ol>
@@ -263,5 +339,5 @@
 
 	<script defer src="scripts/script.js"></script>
 </body>
-	
+
 </html>
