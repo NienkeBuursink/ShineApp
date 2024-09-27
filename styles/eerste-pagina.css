@@ -638,6 +638,10 @@ section:nth-of-type(6) a:hover {
     section:nth-of-type(5) ul {
         display: block;
     }
+    section:nth-of-type(5) li {
+        position: static;
+    }
+    
 
     section:nth-of-type(5) p {
         margin-bottom: 2em;
