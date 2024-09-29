@@ -7,12 +7,7 @@ const podcasts = document.querySelectorAll("section:nth-of-type(3) li");
 
 const popup = document.querySelectorAll("section:nth-of-type(3) dialog");
 const playbutton = document.querySelectorAll("section:nth-of-type(3) li > button");
-const closePopup = document.querySelectorAll("section:nth-of-type(3) dialog button");
-const popupPlaybutton = document.querySelectorAll("section:nth-of-type(3) dialog button:nth-of-type(3)");
-const popupPausebutton = document.querySelectorAll("section:nth-of-type(3) dialog button:nth-of-type(5)");
-
-let rickRoll = new Audio("audio/rickroll.mp4");
-rickRoll.loop = true;
+const closePopup = document.querySelectorAll("section:nth-of-type(3) dialog button:first-of-type");
 
 
 // hamburgertje
@@ -45,7 +40,6 @@ window.onload = () => reviewsLatenZien();
 
 
 // gekke observers
-
 // podcasts observer
 let podcastsInBeeld = [];
 
@@ -54,7 +48,7 @@ const observerPodcasts = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const intersecting = entry.isIntersecting;
     if(intersecting){
-      podcastsInBeeld.push(entry.target);
+      podcastsInBeeld.push(entry.target); //toevoegen aan de array
     }
   });
 
@@ -85,12 +79,12 @@ const observerTherapists = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const intersecting = entry.isIntersecting;
     if(intersecting){
-      therapistsInBeeld.push(entry.target);
+      therapistsInBeeld.push(entry.target); //toevoegen aan de array
     }
   });
 
   // een timer zetten voordat de showElements function wordt aangeroepen
-  // daarmee wordt er gewacht 200ms gewacht op een eventueel volgende rij die in beeld scrollt
+  // daarmee wordt er 200ms gewacht op een eventueel volgende rij die in beeld scrollt
   therapistsInBeeldTimer = setTimeout(() => {
     showElements(therapistsInBeeld);
     // de therapistsInBeeld array leegmaken zodat de rijen bij langzaam scrollen een voor een in beeld kunnen komen
@@ -102,6 +96,7 @@ therapists.forEach((therapist) => {
   observerTherapists.observe(therapist);
 });
 
+
 // bron: https://stackoverflow.com/questions/33977352/how-do-i-delay-a-function-executing-for-each-element-in-an-array-using-javascrip
 
 function showElements(elements) {
@@ -110,8 +105,7 @@ function showElements(elements) {
     
       setTimeout(() => {
         elements[index].classList.add("inbeeld");
-      }, index * 500); // de elemenetn komen 500ms na elkaar in beeld - kun je mee spelen
-
+      }, index * 400); 
     })(i);
   }
 }
@@ -130,19 +124,3 @@ closePopup.forEach((button, index) => {
     popup[index].close();
   });
 });
-
-// geluid afspelen 
-popupPlaybutton.forEach((button, index) => {
-  button.addEventListener("click", function () {
-    if (rickRoll.paused) {
-      rickRoll.play();
-      button.src = "pausebutton.png";  // Change to pause button
-      console.log("Playing audio");
-    } else {
-      rickRoll.pause();
-      button.src = "playbutton.png";  // Change back to play button
-      console.log("Pausing audio");
-    }
-  });
-});
-

@@ -121,7 +121,7 @@ section:nth-of-type(3) h2 {
     color: rgb(255, 255, 255);
 }
 
-section:nth-of-type(3) div{
+section:nth-of-type(3) div{ 
     position: absolute;
     animation: gekke-bounce 2s infinite;
     place-self: center;
@@ -195,7 +195,7 @@ section:nth-of-type(3) li > img:first-of-type {
     order:-2
 }
 
-section:nth-of-type(3) li > button {
+section:nth-of-type(3) li > button { /* witte play button */
     appearance: none;
   	background: none;
 	border: none;
@@ -232,26 +232,31 @@ section:nth-of-type(3) dialog:not([open]){
 section:nth-of-type(3) dialog {
     position: fixed;
     display: grid;
+    gap: 2em;
 
-    width: 70%;
+    aspect-ratio: 1/2;
     height: 90%;
-
     border: none;
     border-radius: 1em;
     place-self: center;
     place-items: center;
 }
 
-section:nth-of-type(3) dialog > img:first-of-type {
+section:nth-of-type(3) dialog img { /* paarse achtergrond */
     position: absolute;
-    rotate: 90deg;
-    z-index: -1;
     place-self: center;
-    max-width: none;
+
+    rotate: 90deg;
+    grid-column: 1/2;
+    grid-row: 1/4;
+
     width: 35em;
+    max-width: none;
+
+    z-index: -1;
 }
 
-section:nth-of-type(3) dialog button:first-of-type {
+section:nth-of-type(3) dialog button {
     position: absolute;
     display:grid;
     top: 0;
@@ -265,7 +270,7 @@ section:nth-of-type(3) dialog button:first-of-type {
     border: none;
 }
 
-section:nth-of-type(3) button:first-of-type span {
+section:nth-of-type(3) button span { /* kruisje */
     display: block;
 	width: 3em;
 	height: .2em;
@@ -283,58 +288,37 @@ section:nth-of-type(3) button span:last-of-type {
     rotate: -45deg;
 }
 
-section:nth-of-type(3) dialog button:nth-of-type(2),
-section:nth-of-type(3) dialog button:nth-of-type(3),
-section:nth-of-type(3) dialog button:nth-of-type(4),
-section:nth-of-type(3) dialog button:nth-of-type(5) {
-    appearance: none;
-  	background: none;
-	border: none;
+section:nth-of-type(3) dialog audio {
+    display: block;
+    grid-row: 3/4;
+    grid-column: 1/2;
 
     align-self: start;
 
-    width: 5em;
-
-    filter: invert(100%);
-
-    grid-column: 1/2;
-    grid-row: 3/4;
+    width: 70%;
 }
-
-section:nth-of-type(3) dialog button:nth-of-type(2) {
-    translate: -100%;
-}
-
-section:nth-of-type(3) dialog button:nth-of-type(3) {
-    width: 5;
-}
-
-section:nth-of-type(3) dialog button:nth-of-type(4) {
-    translate: 100%;
-} 
-
-section:nth-of-type(3) dialog button:nth-of-type(5) {
-    display: none;
-}
-
-
-
 
 section:nth-of-type(3) dialog h4 {
     font-size: 1.5em;
     max-width: 8em;
     background-color: white;
     text-align: center;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+
     align-self: end;
-    
 }
 
 section:nth-of-type(3) dialog p {
-    font-size: 1.4em;
+    font-size: 1.3em;
     max-width: 8em;
     background-color: white;
-    text-align: center;
-    order: 1;
+
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    align-self: start;
 }
 
 section:nth-of-type(3) dialog p:nth-of-type(2) {
@@ -404,15 +388,6 @@ section:nth-of-type(4) li.inbeeld {
     opacity: 1;
 }
 
-
-@keyframes scroll-reveal {
-    from{
-        opacity: 0;
-    } 
-    to {
-        opacity: 1;
-    }  
-}
 
 
 

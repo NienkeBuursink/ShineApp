@@ -1,29 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	--color-brown:rgb(68, 47, 58);
-	--color-p: rgb(95, 95, 95);
-	--color-white:rgb(255, 255, 255);
-	--color-yellow: rgb(248, 238, 216);
-	--color-blue: rgb(48, 122, 122);
-	--color-black: rgb(25, 25, 25);
-	--color-orange: rgb(247, 202, 93);
-	--color-dark-orange: rgb(228, 164, 44);
-}
-
-
-
-
-
-/*basics*/
 @font-face {
 	font-family: Poppins;
 	src: url(../fonts/poppins_regular.ttf) format("truetype");
@@ -53,8 +27,32 @@
 }
 
 
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	--color-brown:rgb(68, 47, 58);
+	--color-p: rgb(95, 95, 95);
+	--color-white:rgb(255, 255, 255);
+	--color-yellow: rgb(248, 238, 216);
+	--color-blue: rgb(48, 122, 122);
+	--color-black: rgb(25, 25, 25);
+	--color-orange: rgb(247, 202, 93);
+	--color-dark-orange: rgb(228, 164, 44);
+}
 
 
+
+
+
+/*basics*/
 body {
 	background-color: var(--color-white);
 }
@@ -65,7 +63,7 @@ body {
 	font-family: Poppins, sans-serif;
 }
 
-*:focus-visible {
+*:focus {
 	outline: none;
 	border: solid .1em var(--color-brown);
 }
@@ -108,16 +106,22 @@ a:focus {
 }
 
 
-body > a {
+body > a {  /*skip to main content (vincent)*/
 	position: absolute;
 	translate: -9999px;
 
-	&:focus{ /*so naar vincent*/
+	background-color: var(--color-yellow);
+	color: var(--color-brown);
+	padding: 2em 4em;
+	
+	&:focus{
 		translate: none;
 	}
 }
 
-
+button:focus {
+	border: solid .1em var(--color-brown) !important;
+}
 
 
 /*header*/
@@ -246,6 +250,7 @@ header.toonMenu button span:nth-child(3){
 
 /* footer */
 footer {
+	position: relative;
 	display: grid;
 	gap: 2em;
 	padding: 2.5em;
@@ -263,6 +268,10 @@ footer h3 {
 	font-weight: 800;
 }
 
+footer ul li a{
+	display: block;
+}
+
 footer ul:first-of-type { /*follow*/
 	display: flex;
 	gap: 2em;
@@ -276,7 +285,7 @@ footer ul:first-of-type li img{
 	}
 }
 
-footer section { /*ols*/
+footer section { /*Company, resources, help*/
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1em;
@@ -334,7 +343,7 @@ footer ul:last-of-type { /*download*/
 	justify-content: space-evenly;
 }
 
-footer ul:last-of-type img {
+footer ul:last-of-type li img {
 	width: 10em;
 }
 
@@ -350,7 +359,74 @@ footer p {
 	font-weight: 400;
 }
 
+/* easter egg */
+footer fieldset {
+	position: absolute;
+	display: flex;
+	gap: 2em;
+	opacity: 0;
+	bottom: 2em;
+	right: 2em;
+	padding: .5em 1em;
 
+	&:hover,
+	&:has(:checked) {
+		opacity: 1;
+	}
+}
+
+footer fieldset input {
+	height: 2em;
+	width: 2em;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+footer fieldset label {
+	display: block;
+	background-color: white;
+	padding: .2em 1em;
+}
+
+footer > img:last-of-type {
+	position: absolute;
+	opacity: 0;
+	width: 20em;
+	bottom: 0;
+	animation: dansje 2s infinite ease-in-out alternate-reverse;
+}
+
+footer:has(:checked) > img:last-of-type {
+	opacity: 1;
+}
+
+@keyframes dansje {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 5%;
+		bottom: 3%;
+	}
+	40% {
+		left: 10%;
+		bottom: 0;
+	}
+	60% {
+		left: 15%;
+		bottom: 3%;
+	}
+	80% {
+		left: 20%;
+		bottom: 0;
+	}
+	100% {
+		left: 25%;
+		bottom: 3%;
+	}
+}
 
 
 
@@ -388,8 +464,9 @@ footer p {
 
 
 	/* footer */
-	footer section {
+	footer section { /* Company, resources, help */
 		grid-template-columns: 1fr 1fr 1fr;
+		max-width: 50em;
 	}
 
 	footer section h3:nth-of-type(3) {

@@ -117,14 +117,17 @@ section:nth-of-type(4) img {
 section:nth-of-type(5) {
     display: grid;
     gap: 1.5em;
-    padding: 6em;
+    padding: 3em;
+
     background-color: var(--color-yellow);
-    margin: 0;
+    background-image: url(../images/backgrounds/lijstje-background.png);
+    background-repeat: no-repeat;
 }
 
 section:nth-of-type(5) h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0;
+    color: var(--color-black);
 }
 
 section:nth-of-type(5) ul li {
@@ -146,8 +149,7 @@ section:nth-of-type(5) ul li strong {
     color: var(--color-dark-orange);
 }
 
-section:nth-of-type(5) p {
-    font-size: .7em;
+section:nth-of-type(5) p { /* sources */
     font-style: italic;
     margin: 0;
 }
@@ -166,8 +168,12 @@ section:nth-of-type(5) p a {
 
 /* blm, expres geen root colors, want light en dark dezelfde kleur */
 section:nth-of-type(6) {
-    padding: 2em 2em;
+    padding: 5em;
     background-color: rgb(25, 25, 25);
+    background-image: url(../images/backgrounds/blm-background.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50%;
 }
 
 section:nth-of-type(6) h2,
@@ -268,12 +274,16 @@ section:nth-of-type(8) p{
 
 
     /* lijstje */
+    section:nth-of-type(5) {
+        padding: 6em;
+    }
+    
     section:nth-of-type(5) h2 {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
 
     section:nth-of-type(5) ul li {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 }
 
