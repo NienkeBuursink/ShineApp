@@ -322,7 +322,8 @@ section:nth-of-type(3) dialog p {
 }
 
 section:nth-of-type(3) dialog p:nth-of-type(2) {
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 
 ::backdrop {

@@ -395,11 +395,11 @@ footer > img:last-of-type {
 	opacity: 0;
 	width: 20em;
 	bottom: 0;
-	animation: dansje 2s infinite ease-in-out alternate-reverse;
 }
 
 footer:has(:checked) > img:last-of-type {
 	opacity: 1;
+	animation: dansje 2s infinite ease-in-out alternate-reverse;
 }
 
 @keyframes dansje {

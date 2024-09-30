@@ -69,6 +69,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik HAAT dat ding, ik ben gewoon overprikkeld als ik er een seconde naar luister.
   de website heeft wel maar 1 h1, dus dat is goed, maar er worden veel te veel h2tjes gebruikt voor stukken tekst die p zouden moet zijn.
   Er is ook geen enkel linkje te vinden op de website.
+  Op een gegeven moment ging het gebruiken van de screenreader wel een stuk beter.
 
 
 
@@ -102,23 +103,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | Randi          | Loïs               | Joep           | Nienke           |
   | Html bespreken | Html bespreken     | Html bespreken?| Html bespreken   |
-  | niks           | fonts              | Radiostilte    | Hamburgermenu    |
+  | ...            | fonts              | Radiostilte    | Hamburgermenu    |
   | ...            | background video   | ...            | ...              |
   | ...            | ...                | ...            | ...              |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - ik ben snel geholpen met de kleine vraag die ik had. We zijn helaas niet aan al onze html pagina's toegekomen. ik vond de meeting opzich een goed idee. maar naast mijn vraag van een half minuutje heb ik verder niet heel veel meegenomen.
+  - ik ben snel geholpen met de kleine vraag die ik had. We zijn helaas niet aan al onze html pagina's toegekomen. ik vond de meeting opzich een goed idee. maar naast mijn vraag van een minuutje heb ik verder niet heel veel extra's geleerd.
 
 </details>
 
@@ -206,19 +203,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ik heb veel nieuwe dingen geleerd over javascript. Bijvoorbeeld de intersectionObserver en het maken van een popup. Ook ben ik meer bewust geworden van hoe ik een website toegankelijk kan maken voor veel verschillende mensen. Ook vond ik het leuk om dingen zelf uit te zoeken en een leuke easter egg te maken.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/popup" width="375px" alt="top">
+  <img src="readme-images/intersection" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik had vaak dat ik veel moeilijker ging denken dan wat nodig was. Een goed voorbeeld hiervan is dat ik in javascript een audio ging maken, terwijl dit gewoon in html kon en dit ook nog toegangkelijker was. Ook heb ik gemerkt met de intersectionObserver dat als je tabt naar die section, de elementen niet goed in beeld komen, ik weet niet hoe ik dit moet fixen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/oei" width="375px" alt="bummer">
 </details>
 
 
@@ -234,8 +232,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://icons8.com/icon/set/social-media/material (icoontjes footer)
+  2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox (checkbox)
+  3. https://www.baamboozle.com/study/1069693 (mieren)
+  4. https://stackoverflow.com/questions/33977352/how-do-i-delay-a-function-executing-for-each-element-in-an-array-using-javascrip (intersection observer)
+  5. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog (js popup)
 
 </details>
